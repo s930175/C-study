@@ -38,6 +38,19 @@ namespace test2
             Console.WriteLine(sw.Elapsed);
             Console.ReadKey();
         }
+        public static void Practice()
+        {
+            string s = "123245678";
+            Console.WriteLine(s.Length);
+            string abc = "abc";
+            //abc = abc.ToUpper();//轉大寫
+            string ABC = "ABC";
+            //ABC = ABC.ToLower();//轉小寫
+            if (abc.Equals(ABC,StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Equals(string,StringComparison.OrdinalIgnoreCase)可以忽略被比較的大小寫");
+            }
+        }
         
     }
 }
