@@ -10,7 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\103面向對象練習\面向對象練習.csproj" />
+    <PackageReference Include="OpenXmlPowerTools" Version="4.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\靜態與非靜態\靜態與非靜態.csproj" />
   </ItemGroup>
 
 </Project>
