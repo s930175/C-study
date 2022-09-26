@@ -68,5 +68,75 @@ namespace test2
             //char[] chs = { '-' };
             string[] date = s.Split(new char[] { '_' }, StringSplitOptions.RemoveEmptyEntries);
         }
+
+        //字符取代
+        public static void Practice4()
+        {
+            string str = "33321532";
+            if (str.Contains("3"))
+            {
+                str = str.Replace("3", "*");
+            }
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+        //Substring擷取字串
+        public static void Practice5()
+        {
+            string str = "AVFJDIYHLD";
+            str = str.Substring(0);//返回原字串
+            str = str.Substring(1);//VFJDIYHLD
+            str = str.Substring(2,3);//FJD
+
+            if (str.StartsWith("A"))
+            {
+                Console.WriteLine("這個字串從A開始");
+            }
+            else if (str.EndsWith("D"))
+            {
+                Console.WriteLine("這個字串由D結束");
+            }
+        }
+        public static void Practice6()
+        {
+            string str = "ADHUIOHKUJLU";
+            int index = str.IndexOf('U');//3
+            int index2 = str.IndexOf('U',4);//8(從4開始找)
+            int index3 = str.LastIndexOf('U');//11
+            for (int i = 0; i < str.Length; i++)
+            {
+                str.IndexOf('U', i);
+            }
+        }
+        //實際例子
+        public static void Practice7()
+        {
+            string path = @"c:a\b\c\d\b\d\c\f\d.png";
+            int index = path.LastIndexOf("\\");//第一個斜線為轉移符
+            //取最後一個\後的東西
+            path = path.Substring(index+1);
+            Console.WriteLine(path);
+            Console.ReadKey();
+        }
+
+        public static void Practice8()
+        {
+            string str = "   dfddsfwe    ";
+            str = str.Trim();//移除前後的空字符
+            //str = str.TrimStart();//去除前面空格
+            //str = str.TrimEnd();//去除後面空格
+            string str2 = null;
+            if (string.IsNullOrEmpty(str))
+            {
+                Console.WriteLine("判斷是否為null或空");
+            }
+
+            string[] names = { "zs","ls","wo","xx","fds" };
+            string newNames = string.Join("|",names);
+            Console.WriteLine(newNames);//zs|ls|wo|xx|fds
+            Console.ReadKey();
+            string newNames2 = string.Join("|", "張三","李四","王五","老六");
+            Console.WriteLine(newNames2);//張三|李四|王五|老六
+        }
     }
 }
